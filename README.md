@@ -66,6 +66,7 @@ atau untuk Controller
 > WelcomeController
 > 
 > file:  **welcome.php**
+
 ```php
 <?php
 namespace Controller;
@@ -78,9 +79,11 @@ class Welcome extends Controller {
 	}
 }
 ```
+
 > HelloController
 > 
 > file: **hello**
+
 ```php
 <?php
 namespace Controller;
@@ -96,9 +99,11 @@ class Hello extends Controller {
 	}
 }
 ```
+
 > Index
 > 
 > file: **index.php**
+
 ```php
 <?php
 require "vendor/autoload.php";
