@@ -1,29 +1,35 @@
 **Kecik DIC (Dependency Injection Container)**
 ================
+This library is a library supporters to support the Dependency Injection Container problems, so the library is an object, controller, it could be a model or library will be loaded only once, so as to avoid wastage.
 
-## Cara Installasi
+## **Installation**
 file composer.json
 ```json
 {
 	"require": {
-		"kecik/dic": "1.0.*@dev""
+		"kecik/dic": "dev-master"
 	}
 }
 ```
 
-Jalankan perintah
+run a command
 ```shell
 composer install
 ```
 
-Pustaka/Library ini merupakan pustaka pendukung untuk mendukung masalah Dependency Injection Container jadi dengan pustaka ini, maka sebuah object, controller, model atau bisa juga Pustaka/Library dapat hanya akan di load satu kali saja, sehingga tidak menimbulkan pemborosan. Pustaka ini juga akan langsung di implementasi oleh Kecik Framework ketika Pustaka/Library ini terdeteksi/dikenali oleh Kecik Framework
-
-## Contoh penggunaan
+## **Example Using**
 ```php
 <?php
 require "vendor/autoload.php";
+$config = array (
+	'libraries' => array (
+		'DIC' => array (
+			'enable' => TRUE
+		)
+	),
+);
 
-$app = new Kecik\Kecik();
+$app = new Kecik\Kecik($config);
 
 class Test1 {
 	public function __construct() {
@@ -61,12 +67,11 @@ $app->get('/', function() use ($app){
 $app->run();
 ?>
 ```
-atau untuk Controller
+or for Controller
 
 > WelcomeController
 > 
 > file:  **welcome.php**
-
 ```php
 <?php
 namespace Controller;
@@ -79,11 +84,9 @@ class Welcome extends Controller {
 	}
 }
 ```
-
 > HelloController
 > 
 > file: **hello**
-
 ```php
 <?php
 namespace Controller;
@@ -99,16 +102,22 @@ class Hello extends Controller {
 	}
 }
 ```
-
 > Index
 > 
 > file: **index.php**
-
 ```php
 <?php
 require "vendor/autoload.php";
 
-$app = new Kecik\Kecik();
+$config = array (
+	'libraries' => array (
+		'DIC' => array (
+			'enable' => TRUE
+		)
+	),
+);
+
+$app = new Kecik\Kecik($config);
 
 $app->container['WelcomeController'] = function($c) {
 	return new Controller\Welcome();
@@ -128,3 +137,4 @@ $app->get('hell/:name', function($name) use ($app) {
 $app->run();
 ?>
 ```
+
