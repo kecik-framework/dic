@@ -107,7 +107,7 @@ class Hello extends Controller {
 }
 ```
 
-> Index
+> **Index**
 > 
 > file: **index.php**
 

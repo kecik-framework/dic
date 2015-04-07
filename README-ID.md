@@ -68,11 +68,13 @@ $app->get('/', function() use ($app){
 $app->run();
 ?>
 ```
+
 atau untuk Controller
 
-> WelcomeController
+> **WelcomeController**
 > 
 > file:  **welcome.php**
+
 ```php
 <?php
 namespace Controller;
@@ -85,9 +87,11 @@ class Welcome extends Controller {
 	}
 }
 ```
-> HelloController
+
+> **HelloController**
 > 
 > file: **hello**
+
 ```php
 <?php
 namespace Controller;
@@ -103,9 +107,11 @@ class Hello extends Controller {
 	}
 }
 ```
-> Index
+
+> **Index**
 > 
 > file: **index.php**
+
 ```php
 <?php
 require "vendor/autoload.php";
