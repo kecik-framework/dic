@@ -67,11 +67,13 @@ $app->get('/', function() use ($app){
 $app->run();
 ?>
 ```
+
 or for Controller
 
-> WelcomeController
+> **WelcomeController**
 > 
 > file:  **welcome.php**
+
 ```php
 <?php
 namespace Controller;
@@ -84,9 +86,11 @@ class Welcome extends Controller {
 	}
 }
 ```
-> HelloController
+
+> **HelloController**
 > 
 > file: **hello**
+
 ```php
 <?php
 namespace Controller;
@@ -102,9 +106,11 @@ class Hello extends Controller {
 	}
 }
 ```
+
 > Index
 > 
 > file: **index.php**
+
 ```php
 <?php
 require "vendor/autoload.php";
@@ -137,4 +143,5 @@ $app->get('hell/:name', function($name) use ($app) {
 $app->run();
 ?>
 ```
+
 
