@@ -90,7 +90,7 @@ class Welcome extends Controller {
 
 > **HelloController**
 > 
-> file: **hello**
+> file: **hello.php**
 
 ```php
 <?php
