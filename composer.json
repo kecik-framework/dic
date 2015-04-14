@@ -1,6 +1,6 @@
 {
     "name": "kecik/dic",
-    "description": "DIC (Dependency Injection Container) Class untuk Kecik Framework",
+    "description": "DIC (Dependency Injection Container) Libraries for Kecik Framework",
     "keywords": ["kecik", "framework", "DI", "DIC"],
     "license": "MIT",
     "authors": [
