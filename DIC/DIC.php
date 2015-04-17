@@ -43,7 +43,7 @@ class DIC implements \ArrayAccess{
      * @return array callback
      **/
 	public function factory(\Closure $func) {
-		return array('factory'=>$func);
+		return ['factory'=>$func];
 	}
 
     /**
